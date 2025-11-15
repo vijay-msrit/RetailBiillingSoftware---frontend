@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Outfit', sans-serif !important;
+}
+
+/* Dark Theme (Default) */
+:root[data-theme="dark"] {
+    --bg-primary: #212529;
+    --bg-secondary: #343a40;
+    --bg-tertiary: #2c3335;
+    --bg-card: #343a40;
+    --text-primary: #f8f9fa;
+    --text-secondary: #e9ecef;
+    --text-muted: #adb5bd;
+    --border-color: #495057;
+    --accent-color: #20c997;
+    --navbar-bg: #212529;
+    --hover-bg: #495057;
+    --shadow: rgba(0, 0, 0, 0.2);
+}
+
+/* Light Theme (Pink) */
+:root[data-theme="light"] {
+    --bg-primary: #fff5f8;
+    --bg-secondary: #ffeef5;
+    --bg-tertiary: #ffeef5;
+    --bg-card: #ffffff;
+    --text-primary: #000000;
+    --text-secondary: #1a1a1a;
+    --text-muted: #4a4a4a;
+    --border-color: #f8d7e6;
+    --accent-color: #e91e63;
+    --navbar-bg: #e91e63;
+    --hover-bg: #fce4ec;
+    --shadow: rgba(233, 30, 99, 0.15);
+}
+
+body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Override Bootstrap text classes in light mode */
+[data-theme="light"] .text-light,
+[data-theme="light"] .text-white {
+    color: #000000 !important;
+}
+
+[data-theme="light"] .text-muted {
+    color: var(--text-muted) !important;
+}

@@ -1,0 +1,39 @@
+.orders-history-container {
+    padding: 20px;
+    height: calc(100vh - 5rem);
+    box-sizing: border-box;
+    background-color: var(--bg-primary);
+    transition: background-color 0.3s ease;
+    color: var(--text-primary);
+}
+
+.orders-history-container h2 {
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+.table {
+    margin-top: 20px;
+}
+
+.table th {
+    font-weight: 600;
+}
+
+.table td {
+    vertical-align: middle;
+}
+
+.badge {
+    font-size: 0.85em;
+    padding: 5px 8px;
+}
+
+@media (max-width: 768px) {
+    .table-responsive {
+        overflow-x: auto;
+    }
+    .table td, .table th {
+        white-space: nowrap;
+    }
+}
